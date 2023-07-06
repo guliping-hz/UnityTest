@@ -18,6 +18,8 @@ public class NewTest : MonoBehaviour
     public int count = 20;
     public float radius = 5f;
     // Start is called before the first frame update
+
+    public Vector3 direct;
     void Start()
     {
         Debug.Log("Glp Start:" + myName);
@@ -49,6 +51,8 @@ public class NewTest : MonoBehaviour
             Quaternion rot = Quaternion.Euler(0, degree, 0);
             Instantiate(myPrefab2, pos, rot);
         }
+
+        // direct.magnitude
     }
 
     // Update is called once per frame

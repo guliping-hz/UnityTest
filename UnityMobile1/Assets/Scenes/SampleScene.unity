@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 402200417}
   - component: {fileID: 402200416}
   - component: {fileID: 402200420}
+  - component: {fileID: 402200421}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -240,6 +241,20 @@ MonoBehaviour:
   myPrefab2: {fileID: 100000, guid: 47365cc78e5cfad41badc534e3d2b7e1, type: 3}
   count: 20
   radius: 5
+--- !u!114 &402200421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402200415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4517c6844dad543adfa0e868d8c3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  speed: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
