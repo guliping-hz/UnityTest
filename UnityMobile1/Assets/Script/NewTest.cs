@@ -26,7 +26,6 @@ public class NewTest : MonoBehaviour
 
         System.Reflection.MemberInfo info = typeof(NewTest);
         object[] attributes = info.GetCustomAttributes(true);
-
         for (int i = 0; i < attributes.Length; i++)
         {
             Debug.Log(attributes[i]);
@@ -37,7 +36,11 @@ public class NewTest : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 // 实例化为位置 (0, 0, 0) 和零旋转。
-                Instantiate(myPrefab, new Vector3(i, j, 0), Quaternion.identity);
+                GameObject obj = Instantiate(myPrefab, new Vector3(i, j, 0), Quaternion.identity);
+                //点击日志可定位到此对象
+                Debug.LogWarning("I'm here y=" + obj.transform.position + ",up=" + Vector3.up, obj);
+                //画一条离地面的垂直的线
+                // Debug.DrawLine(obj.transform.position, obj.transform.position - Vector3.up * obj.transform.position.y, Color.green, 10000);
             }
         }
 
@@ -53,11 +56,21 @@ public class NewTest : MonoBehaviour
         }
 
         // direct.magnitude
+        Debug.DrawLine(transform.position, transform.position - Vector3.up * transform.position.y, Color.green, 4);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // 选中的时候展示一个黄色的立方体
+        // 在变换位置绘制一个黄色立方体
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, new Vector3(5, 5, 5));
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Debug.DrawLine(new Vector3(2, 2, 0), new Vector3(2, 0, 0), Color.magenta, 4);
+        // Debug.DrawRay(new Vector3(0, 0, 0), new Vector3(2, 2, 0), Color.magenta, 4);
     }
 }

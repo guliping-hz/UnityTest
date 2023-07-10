@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 402200416}
   - component: {fileID: 402200420}
   - component: {fileID: 402200421}
+  - component: {fileID: 402200422}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -215,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402200415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 3.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -236,12 +237,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myName: Hello
   myPrefab: {fileID: 100000, guid: 7977e423937da9b48aac1866c67bb5be, type: 3}
-  width: 5
-  height: 10
+  width: 3
+  height: 3
   myPrefab2: {fileID: 100000, guid: 47365cc78e5cfad41badc534e3d2b7e1, type: 3}
   count: 20
   radius: 5
+  direct: {x: 0, y: 0, z: 0}
 --- !u!114 &402200421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402200415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4517c6844dad543adfa0e868d8c3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  speed: 4
+--- !u!114 &402200422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,11 +266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 402200415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4517c6844dad543adfa0e868d8c3ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a06fd955a48eaf4987af6368257e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  speed: 4
+  speed: 0.1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
